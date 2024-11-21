@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    background-color: black;
+    padding: 0px 10px;
+    color: #ebebeb;
+    font-size: 16px;
+    /* font-family: monospace; */
+}
+
+.logo img {
+    width: 80px;
+}
+
+a {
+    color:#ebebeb;
+}
+
+a:hover {
+    color: #ebffff;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 55px;
+}
+
+/* основная часть с авто */
+
+.adds-list {
+    width: 60%;
+    margin: 0px auto;
+}
+
+.adds-list .selling_car {
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+
+.adds-list .selling_car:hover {
+    background-color: #f5f5f5;
+}
+
+.adds-list .selling_car .car-photo {
+    width: 30%;
+}
+
+.adds-list .selling_car img {
+    width: 100%;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.selling_car .car-selling-info {
+    margin-left: 30px;
+    gap: 115px;
+}
+
+.car-selling-info .car-description {
+    line-height: 26px;
+}
+
+.car-selling-info .car-description .car-name {
+    font-size: 19px;
+}
+
+.car-selling-info .car-description .car-equipment {
+    font-size: 13px;
+    color: gray;
+}
+
+.car-selling-info .car-description .car-characteristics {
+    font-size: 16px;
+}
+
+.car-selling-info .car-price {
+    font-weight: bold;
+}
+
+.car-seller-info {
+    margin-top: 135px;
+    font-size: 12px;
+    color: gray;
+    line-height: 16px;
+}
+
+/* ===================== */
+
+footer {
+    background-color: #f5f5f5;
+    padding: 10px 5px;
+    margin: 20px 0px;
+}
