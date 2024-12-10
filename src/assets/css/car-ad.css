@@ -1,0 +1,41 @@
+main {
+    margin-top: 35px;
+}
+
+.advertise-block div {
+    /* border: 1px black solid; */
+}
+
+.advertise-block {
+    margin: 0px auto;
+    width: 75%;
+}
+
+.ads-photos {
+    width: 50%;
+}
+
+.ads-photos img {
+    width: 100%;
+}
+
+.ads-info {
+    margin-left: 25px;
+    width: 410px;
+}
+
+.ads-info .ads-price {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.ads-info section {
+    line-height: 33px;
+    margin-top: 15px;
+}
+
+.ads-info .car-param-description {
+    color: gray;
+    font-size: 17px;
+    width: 38%;
+}
