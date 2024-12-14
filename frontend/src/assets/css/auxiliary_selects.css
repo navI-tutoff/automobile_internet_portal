@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    background-color: black;
+    padding: 0px 15px;
+    color: #ebebeb;
+    font-size: 16px;
+}
+
+header .drom {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 80px;
+}
+
+a {
+    color:#ebebeb;
+}
+
+a:hover {
+    color: #ebffff;
+}
+
+.window-restrict {
+    max-width: 1650px;
+    margin: 0px auto;
+}
+
+.row {
+    display: flex;
+}
+
+.vertical-center {
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
