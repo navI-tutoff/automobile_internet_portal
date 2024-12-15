@@ -1,30 +1,12 @@
+<script setup lang="ts">
+import Header from './components/Header & Footer/Header.vue';
+import Footer from './components/Header & Footer/Footer.vue';
+</script>
+
 <template>
-  <header>
-            <div class="window-restrict row vertical-center space-between">
-                <div class="row vertical-center">
-                    <!-- <div class="logo"><img src="img/png-transparent-2013-audi-a5-2012-audi-a6-2012-audi-a5-coupe-car-audi-compact-car-sedan-vehicle.png"></img></div> -->
-                    <div class="drom">Дром</div>
-                </div>
-
-                <div>Белгородская область</div>
-
-                <nav>
-                    <ul>
-                      <li><router-link to="/auto">Автомобили</router-link></li>
-                      <li><router-link to="/auto">Запчасти</router-link></li>
-                    </ul>
-                </nav>
-
-                <div><router-link to="/login">Вход и регистрация</router-link></div>
-            </div>
-        </header>
+  <Header />
 
   <RouterView />
 
-  <footer>
-    <div class="window-restrict row space-between">
-      <div>БГТУ им.Шухова</div>
-      <div>© ПВ-211 Тутов Данил</div>
-    </div>
-  </footer>
+  <Footer />
 </template>
