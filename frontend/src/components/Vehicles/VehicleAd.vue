@@ -7,7 +7,7 @@ defineProps({
 <template>
     <div>
         <div class="selling_car row">
-            <div class="car-photo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAVwklhrhjLGI7vfdvEhGoCCzIJv4ofT9KTw&s"></div>
+            <div class="car-photo"><img v-bind:src=vehicle.photo></div>
             <div class="car-selling-info row">
                 <div class="car-description">
                     <div class="car-name">{{ vehicle.name }}</div>

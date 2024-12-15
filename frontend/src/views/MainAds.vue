@@ -5,7 +5,7 @@ const vehicles = [
     {
         id: 1,
         name: "Tesla Model S",
-        photo: "@/assets/img/audi_80.jpg",
+        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAVwklhrhjLGI7vfdvEhGoCCzIJv4ofT9KTw&s",
         equipment: "P100D kWh Performance",
         characteristics: "765 л.с., электро, АКПП, 4WD, 24 000 км",
         price: 5000000,
@@ -17,7 +17,7 @@ const vehicles = [
     {
         id: 1,
         name: "Tesla Model S",
-        photo: "@/assets/img/audi_80.jpg",
+        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAVwklhrhjLGI7vfdvEhGoCCzIJv4ofT9KTw&s",
         equipment: "P100D kWh Performance",
         characteristics: "765 л.с., электро, АКПП, 4WD, 24 000 км",
         price: 5000000,
@@ -29,7 +29,7 @@ const vehicles = [
     {
         id: 1,
         name: "Tesla Model S",
-        photo: "@/assets/img/audi_80.jpg",
+        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAVwklhrhjLGI7vfdvEhGoCCzIJv4ofT9KTw&s",
         equipment: "P100D kWh Performance",
         characteristics: "765 л.с., электро, АКПП, 4WD, 24 000 км",
         price: 5000000,
