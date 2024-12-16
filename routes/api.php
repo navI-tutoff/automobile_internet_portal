@@ -14,3 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/catalog', [\App\Http\Controllers\AdsCatalogController::class, 'index']);
+Route::get('/catalog/{id}', [\App\Http\Controllers\AdsCatalogController::class, 'info']);

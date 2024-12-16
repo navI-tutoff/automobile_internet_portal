@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import VehicleAd from '@/components/Vehicles/VehicleAd.vue';
+import VehicleAd from '@/components/vehicles/VehicleAd.vue';
 
 const vehicles = [
     {
