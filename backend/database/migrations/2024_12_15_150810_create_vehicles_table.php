@@ -13,21 +13,25 @@ return new class extends Migration
     {
         Schema::create('vehicles', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('owner_id')->constrained(
+                table: 'users', indexName: 'vehicle_user_id'
+            )
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
             $table->string('name');
             $table->string('photo');
             $table->string('equipment');
             $table->decimal('price', 8, 0)->default(0);
             $table->decimal('mileage', 8, 0)->default(0);
             $table->string('pre_rating');
-            $table->string('seller_nick');
-            $table->string('seller_city');
-            $table->datetime('sell_date');
             $table->string('engine');
             $table->string('power');
             $table->string('gearbox');
             $table->string('drive');
             $table->string('color');
             $table->string('wheel');
+            $table->string('selling_city');
+            $table->datetime('selling_date');
             $table->timestamps();
         });
     }

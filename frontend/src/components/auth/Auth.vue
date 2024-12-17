@@ -9,7 +9,7 @@ const password = ref('')
 const route_path = useRoute().path;
 
 const auth = (event) => {
-    axios.get('login', {login: login.value, password: password.value})
+    axios.get('login/', {login: login.value})
         .then((response) => {
             login.value = response.login;
             password.value = response.password;
@@ -22,13 +22,13 @@ const auth = (event) => {
     <div class="auth-window">
         <div class="auth-text">{{ route_path === '/reg' ? 'Регистрация' : 'Авторизация' }}</div>
 
-        <form class="auth-form" @submit="auth">
+        <form class="auth-form" @submit.prevent="auth">
             </br>   
             <div class="auth-input">
                 <input name="login" type="text" placeholder="Логин" v-model="login">
             </div>
             <div class="auth-input">
-                <input name="password" type="password" placeholder="Пароль">
+                <input name="password" type="password" placeholder="Пароль" v-model="password">
             </div>
             <br/>
             <div class="auth-input">

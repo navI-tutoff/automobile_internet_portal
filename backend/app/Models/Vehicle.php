@@ -8,20 +8,20 @@ class Vehicle extends Model {
     protected $table = 'vehicles';
 
     protected $fillable = [
+        'owner_id',
         'name',
         'photo',
         'equipment',
         'price',
         'mileage',
         'pre_rating',
-        'seller_nick',
-        'seller_city',
-        'sell_date',
         'engine',
         'power',
         'gearbox',
         'drive',
         'color',
-        'wheel'
+        'wheel',
+        'selling_city',
+        'selling_date'
     ];
 }

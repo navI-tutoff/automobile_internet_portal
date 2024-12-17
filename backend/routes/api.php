@@ -14,7 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/auto', [\App\Http\Controllers\VehicleAdsController::class, 'index']);
-Route::get('/auto/{id}', [\App\Http\Controllers\VehicleAdsController::class, 'info']);
+Route::prefix('auto')->group(function () {
+    Route::get('', [\App\Http\Controllers\VehicleAdsController::class, 'index']);
+    Route::get('{id}', [\App\Http\Controllers\VehicleAdsController::class, 'info']);
+});
 
-// Route::get('/login',[\App\Http\Controllers\AuthController::class, 'login'] )
+Route::prefix('login')->group(function () {
+    Route::get('{login}',[\App\Http\Controllers\AuthController::class, 'login']);
+});

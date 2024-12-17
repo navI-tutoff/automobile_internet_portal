@@ -19,7 +19,7 @@ class UserController extends Controller {
     //             ->first();
     // }
 
-    public function login($login, $password) {
+    public function login($login) {
         return User::query()
                 ->select('nick, password')
                 ->where('nick', '=', $login)
