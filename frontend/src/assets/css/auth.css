@@ -1,4 +1,4 @@
-.login-window {
+.auth-window {
     padding: 15px;
     background-color:rgb(223, 223, 223);  
     width: 22%;  
@@ -31,4 +31,10 @@
     border: none;
     border-radius: 5px;
     font-size: 17px;
+}
+
+.auth-ask-status {
+    margin-top: 10px;
+    font-size: 15px;
+    /* align-self: center; */
 }

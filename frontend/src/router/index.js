@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import MainAds from '@/views/MainAds.vue'
+import MainAdsView from '@/views/MainAdsView.vue'
 import LoginView from '@/views/LoginView.vue'
 import VehicleCardView from '@/views/VehicleCardView.vue'
+import RegView from '@/views/RegView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,7 +24,7 @@ const router = createRouter({
     {
       path: '/auto',
       name: 'auto',
-      component: MainAds
+      component: MainAdsView
     },
     {
       path: '/auto/:id',
@@ -36,9 +37,9 @@ const router = createRouter({
       component: LoginView
     },
     {
-      path: '/veh_ad',
-      name: 'veh_ad',
-      component: VehicleCardView
+      path: '/reg',
+      name: 'registration',
+      component: RegView
     }
   ],
 })
