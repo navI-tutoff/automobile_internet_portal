@@ -1,3 +1,7 @@
+<script setup>
+    import '@/assets/css/login.css'
+</script>
+
 <template>
     <main>
         <div class="login-window">

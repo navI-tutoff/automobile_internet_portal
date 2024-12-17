@@ -11,6 +11,15 @@ body div {
     /* border: black 1px solid; */
 }
 
+.router-link {
+    text-decoration: none;
+}
+
+.router-link:hover {
+    color: black;
+    text-decoration: none;
+}
+
 .ads-list {
     width: 60%;
     margin: 0px auto;

@@ -7,7 +7,7 @@ defineProps({
 <template>
     <div class="advertise-block">
         <div>
-            <div><h1>⭐ Продажа {{ vehicle.name }} {{ vehicle.year }} в г.{{ vehicle.city }}</h1></div>
+            <div><h1>⭐ Продажа {{ vehicle.name }} {{ vehicle.year }} в г.{{ vehicle.seller_city }}</h1></div>
             <div class="row">
                 <div class="ads-photos">
                     <img v-bind:src=vehicle.photo>

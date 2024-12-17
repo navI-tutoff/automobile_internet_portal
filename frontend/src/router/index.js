@@ -26,6 +26,11 @@ const router = createRouter({
       component: MainAds
     },
     {
+      path: '/auto/:id',
+      name: 'vehicle-card',
+      component: VehicleCardView
+    },
+    {
       path: '/login',
       name: 'login',
       component: LoginView
