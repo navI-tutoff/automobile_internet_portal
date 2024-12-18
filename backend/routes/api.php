@@ -19,6 +19,5 @@ Route::prefix('auto')->group(function () {
     Route::get('{id}', [\App\Http\Controllers\VehicleAdsController::class, 'info']);
 });
 
-Route::prefix('login')->group(function () {
-    Route::get('{login}',[\App\Http\Controllers\AuthController::class, 'login']);
-});
+Route::post('/login',[\App\Http\Controllers\AuthController::class, 'login']);
+Route::post('/reg',[\App\Http\Controllers\AuthController::class, 'reg']);

@@ -3,17 +3,46 @@ import { useRoute } from 'vue-router';
 import { ref } from 'vue';
 import axios from 'axios';
 
+const statusInfo = ref('')
+const statusBlock = ref(null)
+
 const login = ref('')
 const password = ref('')
 
 const route_path = useRoute().path;
 
 const auth = (event) => {
-    axios.get('login/', {login: login.value})
-        .then((response) => {
-            login.value = response.login;
-            password.value = response.password;
-        })
+    const request_url = route_path === '/reg' ? 'reg' : 'login'
+
+    if (request_url === 'reg') {
+        axios.post('reg', {
+                login: login.value,
+                password: password.value,
+            })
+            .then((response) => {
+                statusInfo.value = 'Вы успешно зарегистрировались'
+                statusBlock.value.classList.remove('hidden')
+            })
+            .catch((response) => {
+                alert("Error\n" + response)
+            })
+    } else {
+        axios.post('login', {
+                login: login.value,
+                password: password.value,
+            })
+            .then((response) => {
+                if (response.data["status"] === 'success') {
+                    statusInfo.value = 'Вы успешно авторизовались'
+                } else {
+                    statusInfo.value = 'error'
+                }
+                statusBlock.value.classList.remove('hidden')
+            })
+            .catch((response) => {
+                alert("Error\n" + response)
+            })
+    }    
 }
 
 </script>
@@ -23,7 +52,7 @@ const auth = (event) => {
         <div class="auth-text">{{ route_path === '/reg' ? 'Регистрация' : 'Авторизация' }}</div>
 
         <form class="auth-form" @submit.prevent="auth">
-            </br>   
+            <div ref="statusBlock" class="status-info hidden">{{ statusInfo }}</div>
             <div class="auth-input">
                 <input name="login" type="text" placeholder="Логин" v-model="login">
             </div>
@@ -40,3 +69,19 @@ const auth = (event) => {
         </router-link>
     </div>
 </template>
+
+<style>
+    .status-info {
+        color: rgb(0, 0, 0);
+        font-size: 17px;
+        text-align: center;
+        padding: 7px 7px;
+        background-color: rgb(183, 255, 183);
+        border-radius: 5px;
+        margin: 15px;
+    }
+
+    .hidden {
+        display: none;
+    }
+</style>

@@ -6,7 +6,6 @@ defineProps({
 
 <template>
     <div>
-        <div>{{ vehicle }}</div>
         <router-link :to="{name: 'vehicle-card', params: {id: vehicle.id}}" class="router-link">
             <div class="selling_car row">
                 <div class="car-photo"><img v-bind:src="vehicle.photo"></div>
