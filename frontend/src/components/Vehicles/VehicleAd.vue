@@ -6,6 +6,7 @@ defineProps({
 
 <template>
     <div>
+        <div>{{ vehicle }}</div>
         <router-link :to="{name: 'vehicle-card', params: {id: vehicle.id}}" class="router-link">
             <div class="selling_car row">
                 <div class="car-photo"><img v-bind:src="vehicle.photo"></div>
@@ -22,8 +23,8 @@ defineProps({
                         <div class="car-pre-rating">{{ vehicle.pre_rating }}</div>
                         <section class="car-seller-info">
                             <div class="seller-nick">{{ vehicle.seller_nick }}</div>
-                            <div class="seller-city">{{ vehicle.seller_city }}</div>
-                            <div class="sell-date">{{ vehicle.sell_date }}</div>
+                            <div class="seller-city">{{ vehicle.selling_city }}</div>
+                            <div class="sell-date">{{ vehicle.selling_date }}</div>
                         </section>
                     </div>
                 </div>

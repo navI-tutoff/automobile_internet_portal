@@ -7,6 +7,8 @@ use App\Models\Vehicle;
 class VehicleAdsController extends Controller {
     public function index() {
         return Vehicle::query()
+                ->join('users', 'vehicles.owner_id', '=', 'users.id')
+                ->select('vehicles.*', 'users.nick AS seller_nick')
                 // ->orderBy('created_at', 'DESC')
                 ->limit(5)
                 ->get();
@@ -14,7 +16,9 @@ class VehicleAdsController extends Controller {
  
     public function info($id) {
         return Vehicle::query()
-                ->where('id', '=', $id) 
+                ->join('users', 'vehicles.owner_id', '=', 'users.id')
+                ->select('vehicles.*', 'users.nick AS seller_nick', 'users.phone_number as seller_phone')
+                ->where('vehicles.id', '=', $id) 
                 ->first();
     }
 }

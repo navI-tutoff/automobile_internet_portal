@@ -7,7 +7,7 @@ defineProps({
 <template>
     <div class="advertise-block">
         <div>
-            <div><h1>⭐ Продажа {{ vehicle.name }} {{ vehicle.year }} в г.{{ vehicle.seller_city }}</h1></div>
+            <div><h1>⭐ Продажа {{ vehicle.name }} {{ vehicle.year }} в г.{{ vehicle.selling_city }}</h1></div>
             <div class="row">
                 <div class="ads-photos">
                     <img v-bind:src=vehicle.photo>
@@ -45,6 +45,13 @@ defineProps({
                             <div class="car-param-description">Руль</div>
                             <div class="param-value">{{ vehicle.wheel }}</div>
                         </div>
+                    </section>
+                    
+                    <section class="selling-info">
+                        <div>{{ vehicle.seller_nick }}</div>
+                        <div>{{ vehicle.selling_city }}</div>
+                        <div>{{ vehicle.selling_date }}</div>
+                        <div>{{ vehicle.seller_phone }}</div>
                     </section>
                 </div>
             </div>
