@@ -21,4 +21,19 @@ class VehicleAdsController extends Controller {
                 ->where('vehicles.id', '=', $id) 
                 ->first();
     }
+
+    public function deleteById($id) {
+        $deleted = Vehicle::destroy($id);
+        if ($deleted) {
+            return [
+                'status' => 'success',
+                'message' => 'Объявление удалено'
+            ];
+        } else {
+            return [
+                'status' => 'failed',
+                'message' => 'Объявление не найдено'
+            ];
+        }
+    }
 }

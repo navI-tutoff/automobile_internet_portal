@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import '@/assets/css/car-ad.css'
+import '@/assets/css/vehicle_card.css'
 import VehicleCard from '@/components/vehicles/VehicleCard.vue';
 import axios from "axios"
 import {ref} from "vue"

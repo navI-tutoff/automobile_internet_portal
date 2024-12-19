@@ -4,6 +4,7 @@ import MainAdsView from '@/views/MainAdsView.vue'
 import LoginView from '@/views/LoginView.vue'
 import VehicleCardView from '@/views/VehicleCardView.vue'
 import RegView from '@/views/RegView.vue'
+import CreateVehAdView from '@/views/CreateVehAdView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -40,6 +41,11 @@ const router = createRouter({
       path: '/reg',
       name: 'registration',
       component: RegView
+    },
+    {
+      path: '/create_ad',
+      name: 'create_ad',
+      component: CreateVehAdView
     }
   ],
 })

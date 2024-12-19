@@ -1,22 +1,28 @@
-.auth-window {
+.create-window {
     padding: 15px;
     background-color:rgb(223, 223, 223);  
-    width: 22%;  
+    width: 38%;  
     border-radius: 11px;
     margin: 60px auto;
 }
 
-.auth-text {
+.text {
     text-align: center;
     font-size: 19px;
     font-weight: bold;
 }
 
-.auth-input {
+.input-block {
+    margin: 0px 85px;
     margin-top: 10px;
 }
 
-.auth-input input {
+.description {
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.input {
     width: 100%;
     box-sizing: border-box;
     padding: 7px;
@@ -24,7 +30,9 @@
     border: 1px solid #aaa;
 }
 
-.btn-login {
+.create-ad-button {
+
+    margin-top: 25px;
     width: 100%;
     background-color: #ff5858;
     padding: 12px 25px;
@@ -32,9 +40,4 @@
     border-radius: 5px;
     font-size: 17px;
     cursor: pointer;
-}
-
-.auth-ask-status {
-    margin-top: 10px;
-    font-size: 15px;
 }

@@ -6,18 +6,17 @@ import axios from 'axios';
 const statusInfo = ref('')
 const statusBlock = ref(null)
 
-const login = ref('')
-const password = ref('')
-
 const route_path = useRoute().path;
 
 const auth = (event) => {
     const request_url = route_path === '/reg' ? 'reg' : 'login'
 
+    const formData = new FormData(event.target)
+
     if (request_url === 'reg') {
         axios.post('reg', {
-                login: login.value,
-                password: password.value,
+                login: formData.get('login'),
+                password: formData.get('password')
             })
             .then((response) => {
                 statusInfo.value = 'Вы успешно зарегистрировались'
@@ -28,8 +27,8 @@ const auth = (event) => {
             })
     } else {
         axios.post('login', {
-                login: login.value,
-                password: password.value,
+            login: formData.get('login'),
+            password: formData.get('password')
             })
             .then((response) => {
                 if (response.data["status"] === 'success') {
@@ -54,10 +53,10 @@ const auth = (event) => {
         <form class="auth-form" @submit.prevent="auth">
             <div ref="statusBlock" class="status-info hidden">{{ statusInfo }}</div>
             <div class="auth-input">
-                <input name="login" type="text" placeholder="Логин" v-model="login">
+                <input name="login" type="text" placeholder="Логин">
             </div>
             <div class="auth-input">
-                <input name="password" type="password" placeholder="Пароль" v-model="password">
+                <input name="password" type="password" placeholder="Пароль">
             </div>
             <br/>
             <div class="auth-input">

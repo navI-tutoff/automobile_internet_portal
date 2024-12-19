@@ -1,7 +1,23 @@
 <script setup>
+import { useRoute } from 'vue-router';
+import { ref } from 'vue';
+import axios from 'axios';
+
 defineProps({
     vehicle: {}
 })
+
+const id = useRoute().params.id
+
+const deleteVeh = (event) => {
+    axios.delete('auto/' + id)
+        .then((response) => {
+            alert(response.data.message)
+        })
+        .catch((response) => {
+            alert("Error\n" + response)
+        })
+}
 </script>
 
 <template>
@@ -53,6 +69,8 @@ defineProps({
                         <div>{{ vehicle.selling_date }}</div>
                         <div>{{ vehicle.seller_phone }}</div>
                     </section>
+
+                    <button class="delete-button" @click="deleteVeh">Удалить</button>
                 </div>
             </div>
         </div>

@@ -22,7 +22,7 @@ class VehiclesSeeder extends Seeder {
                 'drive' => 'полный',
                 'color' => 'белый',
                 'wheel' => 'левый',
-                'selling_city' => 'Строитель сити',
+                'selling_city' => 'Строитель',
                 'selling_date' => '2024-12-16 11:30:25'
             ]);
         }
